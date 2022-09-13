@@ -1,0 +1,309 @@
+/**************************************
+    Default Styles
+***************************************/
+
+@font-face {
+    font-family: HKGroteks;
+    src: url('../fonts/HKGrotesk-SemiBold.otf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: HKGroteks;
+    src: url('../fonts/HKGrotesk-Bold.otf');
+    font-weight: Bold;
+}
+@font-face {
+    font-family: HKGroteks;
+    src: url('../fonts/HKGrotesk-Medium.otf');
+    font-weight: Medium;
+}
+
+:root {
+    --color-primary: #250B38;
+    --color-secondary: #F0A023;
+    --color-white: #fff;
+    --color-content-bg: #F5EEF8;
+    --color-border: #E8DFED;
+    --border-radius: 4px;
+    --border-radius-btn: 19px;
+}
+
+#app * {
+    box-sizing: border-box;
+  }
+
+
+#app body {
+    font-family: HKGroteks, sans-serif;
+}
+
+#app .container-fluid {
+    padding: 0;
+}
+
+#app .row {
+    margin: 0;
+}
+
+
+/**************************************
+    Header Styles
+***************************************/
+
+#app nav {
+    margin: 6px auto 10px auto;
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary);
+    text-align: center;
+    height: 61px;
+    width: calc(100% - 12px);
+
+}
+
+
+#app .dropdown {
+    padding-left: 12px;
+    width: 170px;
+    position: relative;
+   
+    
+}
+
+
+#app .dropdown-menu.show {
+
+    position: absolute;
+    width: calc( 100vw - 30px );
+    left: 50vw !important;
+    top: 44px !important;
+    transform: translateX(-50vw) !important;
+  
+}
+
+#app .dropdown-menu li {
+
+    font-size: 16px;
+    line-height: 26px;
+    text-align: left;
+    font-weight: bold;
+    color: #52526A;
+    position: relative;
+    margin-top: 10px;
+}
+
+
+#app .dropdown-menu li::after {
+
+    position: absolute;
+    content: '';
+    border-bottom: 1px solid var(--color-border);
+    width: calc(100% - 20px);
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+#app .dropdown-menu li:first-child {
+    margin-top: 0 !important;
+}
+
+#app .dropdown-menu li:last-child::after {
+    
+    border-bottom: none;
+
+}
+
+#app .dropdown-item {
+    
+    width: calc(100% - 20px);
+    margin: auto;
+    font-weight: 600;
+}
+
+#app .dropdown-item:hover {
+    background-color: var(--color-secondary);
+    color: #fff;
+    font-weight: 600;
+    border-radius: var(--border-radius);    
+}
+
+
+#app .dropdown-toggle::after {
+    display: none;
+}
+
+#app .select-category-btn .fa-chevron-down {
+    position: absolute;
+    right: 10px;
+    font-size: 16px;
+    color: var(--color-secondary);
+}
+
+#app .dropdown-menu li {
+    width: 100%;
+}
+
+#app .select-category-btn {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: #fff;
+    color: #6C6C83;
+    font-weight: 600;
+    width: 170px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+
+
+/**************************************
+    Button Styles
+***************************************/
+
+#app .expense-btn-wrapper {
+    padding-right: 12px;
+}
+
+#app .add-expense-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    width: 125px;
+    height: 38px;
+    border-radius: var(--border-radius-btn);
+    background: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-secondary);
+}
+
+#app .add-receipt-btn {
+    width: 125px;
+    height: 38px;
+    border-radius: var(--border-radius-btn);
+    background-color: var(--color-secondary);
+    border: none;
+    color: var(--color-white);
+    font-weight: 500;
+}
+
+/**************************************
+    Content Styles
+***************************************/
+
+#app .content {
+
+    background-color: var(--color-content-bg);
+    margin-right: 6px;
+    margin-left: 6px;
+    border-radius: var(--border-radius);
+}
+
+#app .expense-input-fields {
+
+    margin-top: 10px;  
+}
+
+
+#app .expense-input-fields input {
+    font-weight: medium;
+    color: #52526A;
+    font-size: 14px;
+}
+
+#app .expense-input-fields .expense-price {
+    text-align: right;
+}
+
+
+#app .seperator {
+    border-top: 1px solid var(--color-border);
+    margin: 6px 0;
+}
+
+
+#app .expense-input-fields .price {
+    text-align: right;
+    font-weight: medium;
+
+}
+
+#app .content-footer h3 {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: medium;
+
+}
+#app .content-footer {
+    padding-top: 10px;
+}
+#app .content-footer p {
+    font-size: 18px;
+    line-height:23px;
+    font-weight: bold;
+
+}
+
+
+
+/**************************************
+    Footer Styles
+***************************************/
+
+#app .container-wrapper {
+    clear: both;
+    margin-bottom: 67px;
+}
+
+#app footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 68px;
+    z-index: 999;
+    background-color: var(--color-white);
+    border-top: 1px solid var(--color-border);
+}
+
+#app footer h3 {
+
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+#app footer span {
+    font-weight: bold;
+    padding-left: 13px;
+}
+
+#app footer h3,
+#app footer span,
+#app footer button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#app .dropdown-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+
+
+
+
+
+
